@@ -1,1 +1,14 @@
-<paste log output from Kubernetes-mediated prediction, here>
+ubuntu@ip-172-31-51-193:~/DevOps_Microservices/project-ml-microservice-kubernetes$ sudo ./run_kubernetes.sh   pod/jack-devops-project4 created
+NAME                   READY   STATUS              RESTARTS   AGE
+jack-devops-project4   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+ubuntu@ip-172-31-51-193:~/DevOps_Microservices/project-ml-microservice-kubernetes$ sudo kubectl get pod
+NAME                   READY   STATUS    RESTARTS   AGE
+jack-devops-project4   1/1     Running   0          56s
+ubuntu@ip-172-31-51-193:~/DevOps_Microservices/project-ml-microservice-kubernetes$ sudo ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "jack-devops-project4" already exists
+NAME                   READY   STATUS    RESTARTS   AGE
+jack-devops-project4   1/1     Running   0          65s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
